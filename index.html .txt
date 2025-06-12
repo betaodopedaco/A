@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Quase Lá</title>
+
+  <!-- Fontes combinadas em único request -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="..." crossorigin="anonymous"/>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Seção 1: Vídeo de fundo -->
+  <section id="section1" class="full-height-section hero-section-1">
+    <video id="video1" class="bg-video" preload="metadata" muted loop playsinline>
+      <source src="assets/videos/video1.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+    <div class="hero-content">
+      <h1 class="slogan-main">Na Névoa Digital, Sua Marca Ascende.</h1>
+      <p class="slogan-sub">Desvendamos o Vasto. Criamos o Inevitável.</p>
+      <a href="#" class="btn">Comece agora</a>
+    </div>
+  </section>
+
+  <!-- Seção 2: Texto + Globo 3D -->
+  <section id="section2" class="full-height-section secao-minimalista-2">
+    <div class="container">
+      <div id="neoTexto" class="neo-texto">
+        <!-- blocos de <span> com animação -->
+      </div>
+      <div class="linha-divisoria"></div>
+      <div id="scene-container-2"></div>
+    </div>
+  </section>
+
+  <!-- Seção 3: Outro vídeo + overlay de texto -->
+  <section id="section3" class="full-height-section hero-section-3">
+    <video id="video3" class="video-background-3" preload="metadata" muted loop playsinline>
+      <source src="assets/videos/video2.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay-3">
+      <h1 class="slogan-principal">MagnoLogica. O Futuro não é Feito. É Forjado.</h1>
+      <p class="slogan-secundario">Descubra a Visão Que Redefine Mercados.</p>
+      <button class="botao">Saiba Mais</button>
+    </div>
+  </section>
+
+  <!-- Seção 4: Octahedrons 3D -->
+  <section id="section4" class="full-height-section secao-octahedrons-4">
+    <div class="center-text">
+      <h1 id="animated-title"></h1>
+      <p id="section4-subtitle">Precisão. Imersão. Autoridade.</p>
+      <button id="section4-button" class="cta-button">Saiba mais</button>
+    </div>
+    <canvas id="bg-canvas-4"></canvas>
+  </section>
+
+  <!-- Seção 5: Dois takes de vídeo/texto -->
+  <section id="section5" class="full-height-section hero-section-5">
+    <div class="video-container-5">
+      <video id="video5" class="video-bg-5" preload="metadata" muted loop playsinline>
+        <source src="assets/videos/video3.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay-5"></div>
+    </div>
+    <div class="transition-overlay-5" id="transitionOverlay5"></div>
+    <a href="#" class="logo-5">MAGNOLOGICA</a>
+    <div class="social-links-5">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="content-5" id="firstTakeContent">
+      <div class="subtitle-5">INOVAÇÃO SEM LIMITES</div>
+      <h1>Autoridade e Sofisticação em Cada Detalhe</h1>
+      <p class="message-5">Transformando ideias em legados de excelência.</p>
+    </div>
+    <div class="content-5 second-take" id="secondTakeContent">
+      <div class="subtitle-5">ADEUS AO COMUM</div>
+      <h1>O Extraordinário Aguarda</h1>
+      <p class="message-5">Sua história de grandeza está só começando.</p>
+    </div>
+    <div class="scrolldown-5">
+      <span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.153.0/three.min.js"></script>
+  <!-- JS principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>

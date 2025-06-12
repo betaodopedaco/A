@@ -1,0 +1,76 @@
+/* Reset e fontes */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body, html { width:100%; height:100%; font-family:'Inter',sans-serif; background:#000; color:#fff; }
+
+/* Seção full-height com animação */
+.full-height-section {
+  position:relative; width:100%; height:100vh; overflow:hidden;
+  opacity:0; transform:translateY(30px);
+  transition:opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.full-height-section.section-visible {
+  opacity:1; transform:translateY(0);
+}
+
+/* Pseudo‐degradê no final */
+.full-height-section:not(:last-of-type)::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:100%; height:80px;
+  background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.8));
+  pointer-events:none;
+}
+
+/* Vídeo de fundo */
+.bg-video, .video-background-3, .video-bg-5 {
+  position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;
+  filter:brightness(0.6); opacity:0; transition:opacity 1.5s ease-out;
+}
+
+/* Conteúdos centrais */
+.hero-content, .overlay-3, .center-text {
+  position:relative; z-index:2; text-align:center; padding:20px;
+}
+
+/* Slogans e botões */
+.slogan-main { font-family:'Montserrat',sans-serif; font-size:3.5rem; opacity:0; }
+.slogan-sub { font-size:1.8rem; opacity:0; }
+.btn, .botao, .cta-button {
+  display:inline-block; padding:12px 28px; border-radius:8px;
+  backdrop-filter:blur(5px); opacity:0; transform:translateY(20px);
+  transition:all 0.5s ease-out;
+}
+.btn.visible, .botao.visible, .cta-button.visible {
+  opacity:1; transform:translateY(0);
+}
+
+/* Seção 2 - texto 3D */
+.neo-texto { opacity:0; transform:translateY(60px); transition:all 1.5s ease; }
+.neo-texto.revealed { opacity:1; transform:translateY(0); }
+
+/* Canvas 3D full */
+#scene-container-2, #bg-canvas-4 {
+  width:100%; height:50vh; margin:auto; display:block;
+}
+
+/* Seção 5: transições */
+.transition-overlay-5 { position:absolute; inset:0; background:rgba(0,0,0,0.9); opacity:0; pointer-events:none; transition:opacity 1.5s; }
+.transition-overlay-5.active { opacity:1; }
+
+/* Setas de scroll */
+.scrolldown-5 span {
+  display:block; width:20px; height:20px;
+  border-right:2px solid #fff; border-bottom:2px solid #fff;
+  transform:rotate(45deg); margin:-5px;
+  animation:arrowAnim 2s infinite;
+}
+@keyframes arrowAnim { 0%{opacity:0}50%{opacity:1}100%{opacity:0} }
+
+/* Responsividade */
+@media(max-width:768px){
+  .slogan-main { font-size:2.5rem; }
+  .neo-texto { font-size:2.5rem; }
+}
+@media(max-width:480px){
+  .slogan-main { font-size:1.8rem; }
+}
